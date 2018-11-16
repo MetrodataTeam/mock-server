@@ -39,3 +39,5 @@ nosetests.xml
 
 *.log
 docs/_build
+
+.idea/

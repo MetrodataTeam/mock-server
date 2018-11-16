@@ -1,18 +1,19 @@
-# -*- coding: utf-8 -*-
-
 import os
+
 from setuptools import setup
+
 from mock_server import __version__
 
 root_dir = os.path.dirname(__file__)
 
 
 def read(fname):
-    with open(os.path.join(root_dir, fname)) as f:
-        return f.read()
+  with open(os.path.join(root_dir, fname)) as f:
+    return f.read()
+
 
 with open(os.path.join(root_dir, "requirements.txt")) as f:
-    install_requires = [r.strip() for r in f if "#egg=" not in r]
+  install_requires = [r.strip() for r in f if "#egg=" not in r]
 
 description = "%s\n\n%s" % (read("README.rst"), read("CHANGES.rst"))
 
@@ -21,7 +22,6 @@ classifiers = ["Programming Language :: Python",
                "Intended Audience :: Developers",
                "Topic :: Internet",
                "Topic :: Software Development :: Documentation"]
-
 
 setup(
     name="mock-server",
