@@ -17,7 +17,7 @@ class TestRestApi(tornado.testing.AsyncHTTPTestCase):
     time.sleep(2)
 
   def assertJsonBody(self, response, expect):
-    actual = json.loads(response.body)
+    actual = json.loads(response.body.decode())
     self.assertEqual(actual, expect)
 
   @classmethod
